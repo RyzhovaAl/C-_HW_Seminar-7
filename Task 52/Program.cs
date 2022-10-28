@@ -31,20 +31,25 @@ void PrintArray(int[,] inArray)
 
 double GetSumColumns(int [,] massive)
 {
-    double average = 0;
-    for (int i = 0; i < massive.GetLength(0); i++)
-    {
-        int sum = 0; 
-        int count = 0;
-        for (int j = 0; j < massive.GetLength(1); j++)
-        {
-            sum = sum + massive[i, j];
-            count++;
-        }
-        average = sum / count;
-    }
-    return average;
+   for (int i = 0; i < massive.GetLength(0); i++)
+        Console.WriteLine(string.Join("\t", massive));
+
+        double average = Enumerable.Range(0, massive.GetLength(1).Select)
 }
+
+//Печатаем матрицу в консоль
+            for (int i = 0; i < N; i++)
+                Console.WriteLine(string.Join("\t", massive));
+ 
+            //Находим среднее арифметическое столбцов
+            var result = Enumerable.Range(0, M).Select(x => matrix.GetColumn(x).Sum() / M);
+ 
+            //Печатаем среднее арифметическое под соответствующим столбцом (округление к меньшему по модулю)
+            Console.WriteLine();
+            Console.WriteLine(string.Join("\t", result));
+ 
+            Console.ReadKey(true);
+for (j = 0; j < n; j++) { b[j] = 0; for (i = 0; i < m; i++) b[j] += a[i][j]; b[j] = b[j] / m; }
 
 
 
