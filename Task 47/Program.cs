@@ -24,6 +24,10 @@ void PrintArray(double[,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
+            if(inArray[i, j] % 2 == 0);
+            {
+                Console.Write($"{inArray[i, j]:f0}\t ");
+            }
             Console.Write($"{inArray[i, j]:f1}\t ");
         }
     Console.WriteLine();
