@@ -29,27 +29,43 @@ void PrintArray(int[,] inArray)
     }
 }
 
-double GetSumColumns(int [,] massive)
+double GetSumColumns(int[,] massive)
+// {
+//    double[] result = new double[massive.GetLength(1)]; 
+//    double average = 0;
+//    int sum = 0;
+//    int i = 0;
+//    int j = 0;
+//    while(j <massive.GetLength(0))
+//    {
+//         while(i < massive.GetLength(0))
+//         {
+//             sum = sum + massive[i, j];
+//             i++;
+//             average = sum / massive.GetLength(0);
+//             {
+//                 result[massive.GetLength(1)] = average; 
+//                 Console.WriteLine(String.Join(", " , result));
+//             }
+//         }
+//         j++; 
+//     }
+//     return result[massive.GetLength(1)];
+// }
 {
-   for (int i = 0; i < massive.GetLength(0); i++)
-        Console.WriteLine(string.Join("\t", massive));
-
-        double average = Enumerable.Range(0, massive.GetLength(1).Select)
+    int sum = 0;
+    double average = 0;
+    int i = 0;
+    int j = 0;
+    while (i < massive.GetLength(0))
+        {
+            sum = sum + massive[i, j];
+            i++;
+            average = sum / massive.GetLength(0);
+        }
+        return average;
 }
 
-//Печатаем матрицу в консоль
-            for (int i = 0; i < N; i++)
-                Console.WriteLine(string.Join("\t", massive));
- 
-            //Находим среднее арифметическое столбцов
-            var result = Enumerable.Range(0, M).Select(x => matrix.GetColumn(x).Sum() / M);
- 
-            //Печатаем среднее арифметическое под соответствующим столбцом (округление к меньшему по модулю)
-            Console.WriteLine();
-            Console.WriteLine(string.Join("\t", result));
- 
-            Console.ReadKey(true);
-for (j = 0; j < n; j++) { b[j] = 0; for (i = 0; i < m; i++) b[j] += a[i][j]; b[j] = b[j] / m; }
 
 
 
@@ -61,4 +77,4 @@ int columns = int.Parse(Console.ReadLine()!);
 
 int[,] array = GetArray(row, columns, 0, 10);
 PrintArray(array);
-Console.WriteLine($"Среднее арифметическое столбцов равно {GetSumColumns(array)}");
+Console.WriteLine($"Среднее арифметическое столбцов равно {GetSumColumns(array):f2}");
