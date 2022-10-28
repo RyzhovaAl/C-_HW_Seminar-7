@@ -38,7 +38,8 @@ void FindNum(int[,] inArray, int n)
         {
             if(inArray[i, j] == n)
             {
-                Console.WriteLine($"Искомое число {n} в массиве находится в строке {i}, в столбце {j}");
+                Console.WriteLine($"Искомое число {n} в массиве находится в строке под индексом {i}, в столбце под индексом {j}");
+                return;
             }
             // else
             // {
@@ -46,7 +47,6 @@ void FindNum(int[,] inArray, int n)
             // }
 
         }
-        
     }
 }
 
